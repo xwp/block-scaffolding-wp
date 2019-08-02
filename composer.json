@@ -1,0 +1,25 @@
+{
+  "name": "xwp/block-extend",
+  "description": "Extend WordPress Blocks",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {},
+  "require-dev": {
+    "wpsh/local": "^0.2.3",
+    "wp-coding-standards/wpcs": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "XWP\\BlockExtend\\": "php/"
+    }
+  },
+  "scripts": {
+    "lint": [
+      "@composer validate --strict",
+      "phpcs ."
+    ],
+    "build": [
+      "composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts"
+    ]
+  }
+}

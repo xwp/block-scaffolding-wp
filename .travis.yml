@@ -1,0 +1,16 @@
+language: php
+
+php:
+  - "7.3"
+
+install:
+  - composer install
+  - npm install
+
+script:
+  - composer lint
+  - npm run lint
+
+notifications:
+  email: false
+
