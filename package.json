@@ -13,6 +13,7 @@
     "url": "git+https://github.com/xwp/block-extend.git"
   },
   "scripts": {
+    "postinstall": "composer install",
     "lint": "eslint js/src",
     "dev": "webpack --watch --mode=development --output=js/dist/[name].js",
     "build": "webpack --mode=production --output=js/dist/[name].js"
