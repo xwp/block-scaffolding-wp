@@ -1,4 +1,8 @@
-language: php
+dist: xenial
+
+language:
+  - php
+  - node_js
 
 php:
   - "7.3"
@@ -13,3 +17,12 @@ script:
 notifications:
   email: false
 
+# Pull requests are built by default.
+branches:
+  only:
+  - master
+
+cache:
+  npm: true
+  directories:
+    - $HOME/.composer/cache
