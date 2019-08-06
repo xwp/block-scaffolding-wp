@@ -45,13 +45,6 @@ class BlockExtendPlugin {
 				'lodash',
 				'react',
 				'wp-block-editor',
-				'wp-blocks',
-				'wp-components',
-				'wp-data',
-				'wp-edit-post',
-				'wp-element',
-				'wp-hooks',
-				'wp-i18n',
 			],
 			$this->plugin->asset_version()
 		);
