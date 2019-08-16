@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
 	# Setup the WP site.
 	config.vm.provision "shell",
-		inline: "docker-compose run wpcli wp core install --url=blockextend.local --title=\"Block Extend\" --admin_user=admin --admin_password=password --admin_email=admin@example.com",
+		inline: "docker-compose run wpcli wp core install --url=blockextend.local",
 		run: "always",
 		env: {
 			"COMPOSE_FILE" => "/vagrant/docker-compose.yml"
