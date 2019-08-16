@@ -11,8 +11,8 @@ install:
   - npm install
 
 script:
-  - composer lint
-  - npm run lint
+  - npm run lint:all
+  - npm run test:all
 
 notifications:
   email: false

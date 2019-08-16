@@ -19,6 +19,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint js/src",
     "lint:php": "composer lint",
+    "test": "npm-run-all --parallel test:*",
     "test:php": "composer test"
   },
   "devDependencies": {
