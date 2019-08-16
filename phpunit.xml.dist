@@ -9,8 +9,8 @@
 	>
 
 	<testsuites>
-		<testsuite>
-			<directory suffix=".php">./tests/php/</directory>
+		<testsuite name="blockextend">
+			<directory>./tests/php/</directory>
 		</testsuite>
 	</testsuites>
 
