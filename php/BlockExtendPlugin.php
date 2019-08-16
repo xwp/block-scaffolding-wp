@@ -39,7 +39,7 @@ class BlockExtendPlugin {
 	 */
 	public function enqueue_editor_assets() {
 		wp_enqueue_script(
-			'xwp-block-exend-js',
+			'xwp-block-extend-js',
 			$this->plugin->asset_url( 'js/dist/editor.js' ),
 			[
 				'lodash',

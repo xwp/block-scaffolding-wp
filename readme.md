@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/xwp/block-extend.svg?branch=master)](https://travis-ci.com/xwp/block-extend)
 
+[![Coverage Status](https://coveralls.io/repos/github/xwp/block-extend/badge.svg?branch=master)](https://coveralls.io/github/xwp/block-extend?branch=master)
+
 
 ## Requirements
 
@@ -29,3 +31,15 @@
 	   npm run build
 	
 	or use `npm run dev` to watch and re-build as you work.
+
+5. Lint JavaScript files with ESLint:
+
+	   npm run lint:js
+
+6. Lint PHP files with phpcs:
+
+	   npm run lint:php
+
+6. Run PHPUnit tests, with the optional `--no-coverage` flag to avoid generating the Clover test coverage report:
+
+	   npm run test:php -- --no-coverage

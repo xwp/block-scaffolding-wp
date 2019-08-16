@@ -3,14 +3,25 @@
   "description": "Extend WordPress Blocks",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
-  "require": {},
+  "require": {
+    "composer/installers": "^1.7"
+  },
   "require-dev": {
-    "wpsh/local": "^0.2.3",
-    "wp-coding-standards/wpcs": "^2.1"
+    "10up/wp_mock": "^0.4.2",
+    "mockery/mockery": "^1.2",
+    "php-coveralls/php-coveralls": "^2.1",
+    "phpunit/phpunit": "^8.3",
+    "wp-coding-standards/wpcs": "^2.1",
+    "wpsh/local": "^0.2.3"
   },
   "autoload": {
     "psr-4": {
       "XWP\\BlockExtend\\": "php/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XWP\\BlockExtendTest\\": "tests/php/"
     }
   },
   "scripts": {
@@ -18,8 +29,17 @@
       "@composer validate --strict",
       "phpcs ."
     ],
+    "test": [
+      "phpunit"
+    ],
+    "coverage": [
+      "php-coveralls --verbose"
+    ],
     "build": [
       "composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts"
     ]
+  },
+  "config": {
+    "sort-packages": true
   }
 }
