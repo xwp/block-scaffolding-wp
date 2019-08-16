@@ -36,7 +36,8 @@ services:
       - wordpress
     volumes:
       - wp_data:/var/www/html
-    command: wp core install --url=blockextend.local --title="Block Extend" --admin_user=admin --admin_password=password --admin_email=admin@example.com --path=/var/www/html
+      - .:/var/www/html/wp-content/plugins/block-extend
+      - ./scripts/docker/wp-cli.yml:/var/www/html/wp-cli.yml
 
 volumes:
   db_data: {}

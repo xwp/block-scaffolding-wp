@@ -24,22 +24,23 @@
 
 	   vagrant up
 
-	which will be available at [http://blockextend.local](http://blockextend.local) after provisioning (username: `admin`, password: `password`).
+	which will be available at [blockextend.local](http://blockextend.local) after provisioning (username: `admin`, password: `password`).
 
-4. Build the plugin JS and CSS assets:
+	Alternatively, run it on your local Docker host:
 
-	   npm run build
+	   docker-compose up -d
 	
-	or use `npm run dev` to watch and re-build as you work.
+	which will make it available at [locahost](http://locahost).
 
-5. Lint JavaScript files with ESLint:
 
-	   npm run lint:js
+### Scripts
 
-6. Lint PHP files with phpcs:
+We use `npm` as the canonical task runner for the project. Some of the PHP related scripts are defined in `composer.json`.
 
-	   npm run lint:php
+- `npm run build` to build the plugin JS and CSS assets. Use `npm run dev` to watch and re-build as you work.
 
-6. Run PHPUnit tests, with the optional `--no-coverage` flag to avoid generating the Clover test coverage report:
+- `npm run lint:js` to lint JavaScript files with [eslint]().
 
-	   npm run test:php -- --no-coverage
+- `npm run lint:php` to lint PHP files with [phpcs]().
+
+- `npm run test:php -- --no-coverage` to tun PHPUnit tests, with the optional `--no-coverage` flag to avoid generating the Clover test coverage report.
