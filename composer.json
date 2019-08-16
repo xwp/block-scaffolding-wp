@@ -3,10 +3,15 @@
   "description": "Extend WordPress Blocks",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
-  "require": {},
+  "require": {
+    "composer/installers": "^1.7"
+  },
   "require-dev": {
-    "wpsh/local": "^0.2.3",
-    "wp-coding-standards/wpcs": "^2.1"
+    "10up/wp_mock": "^0.4.2",
+    "php-coveralls/php-coveralls": "^2.1",
+    "phpunit/phpunit": "^8.3",
+    "wp-coding-standards/wpcs": "^2.1",
+    "wpsh/local": "^0.2.3"
   },
   "autoload": {
     "psr-4": {
