@@ -23,6 +23,9 @@
       "@composer validate --strict",
       "phpcs ."
     ],
+    "test": [
+      "phpunit"
+    ],
     "build": [
       "composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts"
     ]
