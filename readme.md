@@ -40,6 +40,6 @@
 
 	   npm run lint:php
 
-6. Run PHPUnit tests, with the optional `--coverage` flag preceded by `--` to create a report:
+6. Run PHPUnit tests, with the optional `--no-coverage` flag to avoid generating the Clover test coverage report:
 
-	   npm run test:php -- --coverage-html tmp/report
+	   npm run test:php -- --no-coverage
