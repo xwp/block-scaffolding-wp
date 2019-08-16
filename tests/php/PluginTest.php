@@ -34,6 +34,7 @@ class PluginTest extends BlockExtendTestCase {
 	 * @covers XWP\BlockExtend\Plugin::basename()
 	 */
 	public function test_basename() {
+		// Is there a way to do this using withArgs() and andReturnValues()?
 		$mock = WP_Mock::userFunction( 'plugin_basename' )->twice();
 
 		$mock->with( '/any/random/file.js' )->andReturn( 'plugins/any/random/file.js' );
