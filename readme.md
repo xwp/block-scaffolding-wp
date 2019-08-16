@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/xwp/block-extend.svg?branch=master)](https://travis-ci.com/xwp/block-extend)
 
+[![Coverage Status](https://coveralls.io/repos/github/xwp/block-extend/badge.svg?branch=master)](https://coveralls.io/github/xwp/block-extend?branch=master)
+
 
 ## Requirements
 
