@@ -29,5 +29,6 @@
 
 	<logging>
 		<log type="coverage-clover" target="tests/reports/clover.xml" />
+		<log type="coverage-text" target="php://stdout" />
 	</logging>
 </phpunit>
