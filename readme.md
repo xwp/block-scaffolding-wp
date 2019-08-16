@@ -29,3 +29,15 @@
 	   npm run build
 	
 	or use `npm run dev` to watch and re-build as you work.
+
+5. Lint JavaScript with ESLint:
+
+	   npm run lint:js
+
+6. Lint PHP with phpcs:
+
+	   npm run lint:php
+
+6. Run PHPUnit tests, with optional --coverage flag preceded by -- to create a report:
+
+	   npm run test:php -- --coverage-html tmp/report
