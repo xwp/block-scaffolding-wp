@@ -18,6 +18,7 @@
 		<whitelist processUncoveredFilesFromWhitelist="false">
 			<directory suffix=".php">./</directory>
 			<exclude>
+				<file>./plugin.php</file>
 				<directory suffix=".php">./node_modules</directory>
 				<directory suffix=".php">./tests</directory>
 				<directory suffix=".php">./vendor</directory>
@@ -28,5 +29,6 @@
 
 	<logging>
 		<log type="coverage-clover" target="tests/reports/clover.xml" />
+		<log type="coverage-text" target="php://stdout" />
 	</logging>
 </phpunit>
