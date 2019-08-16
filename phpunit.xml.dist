@@ -10,7 +10,7 @@
 
 	<testsuites>
 		<testsuite>
-			<directory suffix=".php">./tests/</directory>
+			<directory suffix=".php">./tests/php/</directory>
 		</testsuite>
 	</testsuites>
 
