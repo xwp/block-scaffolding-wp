@@ -30,7 +30,7 @@
 
 	   docker-compose up -d
 	
-	which will make it available at [locahost:9075](http://locahost:9075).
+	which will make it available at [locahost](http://locahost).
 
 
 ### Scripts
