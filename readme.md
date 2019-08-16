@@ -24,7 +24,7 @@
 
 	   vagrant up
 
-	which will be available at [http://blockextend.local](http://blockextend.local) after provisioning (username: `admin`, password: `password`).
+	which will be available at [blockextend.local](http://blockextend.local) after provisioning.
 
 4. Build the plugin JS and CSS assets:
 
