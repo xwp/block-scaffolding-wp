@@ -1,3 +1,4 @@
+# Default config for the local development environment.
 path: /var/www/html
 
 core install:
