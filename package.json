@@ -18,8 +18,8 @@
     "build": "webpack --mode=production --output=js/dist/[name].js",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint js/src",
-    "lint:php": "vendor/bin/phpcs",
     "test:php": "phpunit"
+    "lint:php": "composer lint",
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
