@@ -20,7 +20,9 @@
     "lint:js": "eslint js/src",
     "lint:php": "composer lint",
     "test": "npm-run-all --parallel test:*",
-    "test:php": "composer test"
+    "test:php": "composer test",
+    "coverage": "npm-run-all --parallel coverage:*",
+    "coverage:php": "composer coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

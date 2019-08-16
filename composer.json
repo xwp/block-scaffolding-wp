@@ -32,6 +32,9 @@
     "test": [
       "phpunit"
     ],
+    "coverage": [
+      "php-coveralls --verbose"
+    ],
     "build": [
       "composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts"
     ]
