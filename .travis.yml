@@ -13,6 +13,7 @@ install:
 script:
   - composer lint
   - npm run lint
+  - npm run test:php
 
 notifications:
   email: false
