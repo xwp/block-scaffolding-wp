@@ -21,6 +21,7 @@
     "lint:php": "composer lint",
     "test": "npm-run-all --parallel test:*",
     "test:php": "composer test",
+    "test:php:no-coverage": "composer test -- --no-coverage",
     "coverage": "npm-run-all --parallel coverage:*",
     "coverage:php": "composer coverage"
   },

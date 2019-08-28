@@ -42,4 +42,4 @@ We use `npm` as the canonical task runner for the project. Some of the PHP relat
 
 - `npm run lint:php` to lint PHP files with [phpcs]().
 
-- `npm run test:php` to run PHPUnit tests.
+- `npm run test:php:no-coverage` to run PHPUnit tests without checking the coverage.
