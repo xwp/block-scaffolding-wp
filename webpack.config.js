@@ -1,14 +1,20 @@
+/**
+ * External dependencies
+ */
+const path = require( 'path' );
+
+/**
+ * WordPress dependencies
+ */
+const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+
 module.exports = {
+	...defaultConfig,
 	entry: {
 		editor: './js/src/editor.js',
 	},
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				exclude: /node_modules/,
-			},
-		],
+	output: {
+		path: path.resolve( process.cwd(), 'js', 'dist' ),
+		filename: '[name].js',
 	},
 };

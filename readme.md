@@ -28,7 +28,7 @@
 	Alternatively, run it on your local Docker host:
 
 	   docker-compose up -d
-	
+
 	which will make it available at [locahost](http://locahost).
 
 
@@ -42,4 +42,4 @@ We use `npm` as the canonical task runner for the project. Some of the PHP relat
 
 - `npm run lint:php` to lint PHP files with [phpcs]().
 
-- `npm run test:php -- --no-coverage` to tun PHPUnit tests, with the optional `--no-coverage` flag to avoid generating the Clover test coverage report.
+- `npm run test:php -- --no-coverage` to run PHPUnit tests, with the optional `--no-coverage` flag to avoid generating the Clover test coverage report.
