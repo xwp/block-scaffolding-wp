@@ -38,8 +38,8 @@ We use `npm` as the canonical task runner for the project. Some of the PHP relat
 
 - `npm run build` to build the plugin JS and CSS assets. Use `npm run dev` to watch and re-build as you work.
 
-- `npm run lint:js` to lint JavaScript files with [eslint]().
+- `npm run lint:js` to lint JavaScript files with [eslint](https://eslint.org/).
 
-- `npm run lint:php` to lint PHP files with [phpcs]().
+- `npm run lint:php` to lint PHP files with [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
 
 - `npm run test:php:no-coverage` to run PHPUnit tests without checking the coverage.
