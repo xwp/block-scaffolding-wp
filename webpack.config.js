@@ -14,7 +14,7 @@ module.exports = {
 		editor: './js/src/editor.js',
 	},
 	output: {
-		path: path.resolve( process.cwd(), 'js', 'dist' ),
+		path: path.resolve( __dirname, 'js/dist' ),
 		filename: '[name].js',
 	},
 };
