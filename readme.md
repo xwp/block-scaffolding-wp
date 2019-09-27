@@ -29,7 +29,7 @@
 
 	   docker-compose up -d
 
-	which will make it available at [locahost](http://locahost).
+	which will make it available at [localhost](http://localhost).
 
 
 ### Scripts
