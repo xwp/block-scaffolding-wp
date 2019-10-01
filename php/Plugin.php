@@ -164,7 +164,7 @@ class Plugin {
 	public function meta( $field = null ) {
 		static $meta;
 
-		if ( ! isset( $meta ) ) {
+		if ( ! isset( $meta ) && function_exists( 'get_plugin_data' ) ) {
 			$meta = get_plugin_data( $this->file );
 		}
 
