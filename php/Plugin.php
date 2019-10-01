@@ -154,14 +154,26 @@ class Plugin {
 	/**
 	 * Sync the plugin version with the asset version.
 	 *
+	 * @param string $file Path to the file for which to check modified time.
+	 *
 	 * @return string
 	 */
-	public function asset_version() {
+	public function asset_version( $file = false ) {
 		if ( $this->is_debug() || $this->is_script_debug() ) {
-			return time();
+			return (string) time();
 		}
 
-		return $this->version();
+		$version = $this->version();
+
+		if ( empty( $version ) ) {
+			if ( ! empty( $file ) && file_exists( $file ) ) {
+				$version = (string) filemtime( $file );
+			} else {
+				$version = $GLOBALS['wp_version'];
+			}
+		}
+
+		return $version;
 	}
 
 	/**
