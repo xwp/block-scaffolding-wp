@@ -1,0 +1,9 @@
+# Default config for the local development environment.
+path: /var/www/html
+
+core install:
+  title: Block Extend
+  admin_user: admin
+  admin_password: password
+  admin_email: admin@blockextend.local
+
