@@ -23,9 +23,9 @@
 
 	   vagrant up
 
-	This is optional, and this plugin should still run in a typical WordPress development environment.
-
 	which will be available at [blockextend.local](http://blockextend.local) after provisioning (username: `admin`, password: `password`).
+
+	This is optional, and this plugin should still run in a typical WordPress development environment.
 
 	Alternatively, run it on your local Docker host:
 
