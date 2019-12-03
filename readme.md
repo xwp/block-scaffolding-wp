@@ -19,11 +19,13 @@
 
 	   npm install
 
-3. Start a virtual testing environment using [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/):
+3. If you need a WordPress development environment, start one using [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/):
 
 	   vagrant up
 
 	which will be available at [blockextend.local](http://blockextend.local) after provisioning (username: `admin`, password: `password`).
+
+	This is optional, and this plugin should still run in a typical WordPress development environment.
 
 	Alternatively, run it on your local Docker host:
 
