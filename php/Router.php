@@ -1,23 +1,28 @@
 <?php
+/**
+ * Router class.
+ *
+ * @package BlockExtend
+ */
 
 namespace XWP\BlockExtend;
 
 /**
  * Plugin Router.
  */
-class BlockExtendPlugin {
+class Router {
 
 	/**
 	 * Plugin interface.
 	 *
-	 * @var XWP\BlockExtend\Plugin
+	 * @var Plugin
 	 */
 	protected $plugin;
 
 	/**
 	 * Setup the plugin instance.
 	 *
-	 * @param XWP\BlockExtend\Plugin $plugin Instance of the plugin abstraction.
+	 * @param Plugin $plugin Instance of the plugin abstraction.
 	 */
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;

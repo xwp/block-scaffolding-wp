@@ -21,7 +21,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "XWP\\BlockExtendTest\\": "tests/php/"
+      "XWP\\BlockExtend\\": "tests/php/"
     }
   },
   "scripts": {

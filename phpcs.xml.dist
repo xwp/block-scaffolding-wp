@@ -3,14 +3,11 @@
 	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs" />
 
 	<rule ref="WordPress-Core">
-		<exclude name="WordPress.Arrays.MultipleStatementAlignment" />
-		<exclude name="Generic.Formatting.MultipleStatementAlignment" />
 		<exclude name="WordPress.Files.FileName" />
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
 	</rule>
 
-	<rule ref="WordPress-Docs">
-		<exclude name="Squiz.Commenting.FileComment" />
-	</rule>
+	<rule ref="WordPress-Docs"></rule>
 
 	<arg name="extensions" value="php" />
 	<arg name="colors" />

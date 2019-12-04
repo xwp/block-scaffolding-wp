@@ -1,27 +1,29 @@
 <?php
 /**
- * Tests for class BlockExtendPlugin.
+ * Tests for Router class.
+ *
+ * @package BlockExtend
  */
 
-namespace XWP\BlockExtendTest;
+namespace XWP\BlockExtend;
 
-use WP_Mock;
 use Mockery;
-use XWP\BlockExtend\BlockExtendPlugin;
-use XWP\BlockExtend\Plugin;
+use WP_Mock;
 
 /**
- * Tests for class BlockExtendPlugin.
+ * Tests for the Router class.
  */
-class BlockExtendPluginTest extends BlockExtendTestCase {
+class TestRouter extends WP_Mock\Tools\TestCase {
+
+	use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 
 	/**
 	 * Test init.
 	 *
-	 * @covers XWP\BlockExtend\BlockExtendPlugin::init()
+	 * @covers \XWP\BlockExtend\Router::init()
 	 */
 	public function test_init() {
-		$plugin = new BlockExtendPlugin( Mockery::mock( Plugin::class ) );
+		$plugin = new Router( Mockery::mock( Plugin::class ) );
 
 		WP_Mock::expectActionAdded( 'enqueue_block_editor_assets', [ $plugin, 'enqueue_editor_assets' ], 10, 1 );
 
@@ -31,7 +33,7 @@ class BlockExtendPluginTest extends BlockExtendTestCase {
 	/**
 	 * Test enqueue_editor_assets.
 	 *
-	 * @covers XWP\BlockExtend\BlockExtendPlugin::enqueue_editor_assets()
+	 * @covers \XWP\BlockExtend\Router::enqueue_editor_assets()
 	 */
 	public function test_enqueue_editor_assets() {
 		$plugin = Mockery::mock( Plugin::class );
@@ -54,7 +56,7 @@ class BlockExtendPluginTest extends BlockExtendTestCase {
 				'1.2.3'
 			);
 
-		$block_extend = new BlockExtendPlugin( $plugin );
+		$block_extend = new Router( $plugin );
 		$block_extend->enqueue_editor_assets();
 	}
 }

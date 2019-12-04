@@ -10,7 +10,7 @@
 
 	<testsuites>
 		<testsuite name="blockextend">
-			<directory>./tests/php/</directory>
+			<directory suffix=".php">./tests/php/</directory>
 		</testsuite>
 	</testsuites>
 
@@ -18,7 +18,7 @@
 		<whitelist processUncoveredFilesFromWhitelist="false">
 			<directory suffix=".php">./</directory>
 			<exclude>
-				<file>./plugin.php</file>
+				<file>./block-extend.php</file>
 				<directory suffix=".php">./node_modules</directory>
 				<directory suffix=".php">./tests</directory>
 				<directory suffix=".php">./vendor</directory>

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Plugin class.
+ *
+ * @package BlockExtend
+ */
 
 namespace XWP\BlockExtend;
 
@@ -35,9 +40,8 @@ class Plugin {
 	 * @param string $plugin_file_path Absolute path to the main plugin file.
 	 */
 	public function __construct( $plugin_file_path ) {
-		$this->file = $plugin_file_path;
-
-		$this->dir = dirname( $plugin_file_path );
+		$this->file        = $plugin_file_path;
+		$this->dir         = dirname( $plugin_file_path );
 		$this->uploads_dir = wp_upload_dir( null, false );
 	}
 
