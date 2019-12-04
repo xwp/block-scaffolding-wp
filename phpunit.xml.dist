@@ -9,7 +9,7 @@
 	>
 
 	<testsuites>
-		<testsuite name="blockextend">
+		<testsuite name="BlockPluginTemplate">
 			<directory>./tests/php/</directory>
 		</testsuite>
 	</testsuites>

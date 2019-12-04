@@ -1,16 +1,16 @@
 {
-  "name": "@xwp/block-extend",
+  "name": "@xwp/block-plugin-template",
   "version": "1.0.0",
   "description": "Extending WordPress Blocks",
   "author": "XWP",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/xwp/block-extend/issues"
+    "url": "https://github.com/xwp/block-plugin-template/issues"
   },
-  "homepage": "https://github.com/xwp/block-extend#readme",
+  "homepage": "https://github.com/xwp/block-plugin-template#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xwp/block-extend.git"
+    "url": "git+https://github.com/xwp/block-plugin-template.git"
   },
   "scripts": {
     "postinstall": "composer install",

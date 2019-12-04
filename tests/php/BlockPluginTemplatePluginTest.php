@@ -1,27 +1,27 @@
 <?php
 /**
- * Tests for class BlockExtendPlugin.
+ * Tests for class BlockPluginTemplatePlugin.
  */
 
-namespace XWP\BlockExtendTest;
+namespace XWP\BlockPluginTemplateTest;
 
 use WP_Mock;
 use Mockery;
-use XWP\BlockExtend\BlockExtendPlugin;
-use XWP\BlockExtend\Plugin;
+use XWP\BlockPluginTemplate\BlockPluginTemplatePlugin;
+use XWP\BlockPluginTemplate\Plugin;
 
 /**
- * Tests for class BlockExtendPlugin.
+ * Tests for class BlockPluginTemplatePlugin.
  */
-class BlockExtendPluginTest extends BlockExtendTestCase {
+class BlockPluginTemplatePluginTest extends BlockPluginTemplateTestCase {
 
 	/**
 	 * Test init.
 	 *
-	 * @covers XWP\BlockExtend\BlockExtendPlugin::init()
+	 * @covers XWP\BlockPluginTemplate\BlockPluginTemplatePlugin::init()
 	 */
 	public function test_init() {
-		$plugin = new BlockExtendPlugin( Mockery::mock( Plugin::class ) );
+		$plugin = new BlockPluginTemplatePlugin( Mockery::mock( Plugin::class ) );
 
 		WP_Mock::expectActionAdded( 'enqueue_block_editor_assets', [ $plugin, 'enqueue_editor_assets' ], 10, 1 );
 
@@ -31,7 +31,7 @@ class BlockExtendPluginTest extends BlockExtendTestCase {
 	/**
 	 * Test enqueue_editor_assets.
 	 *
-	 * @covers XWP\BlockExtend\BlockExtendPlugin::enqueue_editor_assets()
+	 * @covers XWP\BlockPluginTemplate\BlockPluginTemplatePlugin::enqueue_editor_assets()
 	 */
 	public function test_enqueue_editor_assets() {
 		$plugin = Mockery::mock( Plugin::class );
@@ -48,13 +48,13 @@ class BlockExtendPluginTest extends BlockExtendTestCase {
 		WP_Mock::userFunction( 'wp_enqueue_script' )
 			->once()
 			->with(
-				'xwp-block-extend-js',
+				'xwp-block-plugin-template-js',
 				'http://example.com/js/dist/editor.js',
 				Mockery::type( 'array' ),
 				'1.2.3'
 			);
 
-		$block_extend = new BlockExtendPlugin( $plugin );
+		$block_extend = new BlockPluginTemplatePlugin( $plugin );
 		$block_extend->enqueue_editor_assets();
 	}
 }

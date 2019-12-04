@@ -6,7 +6,7 @@ load File.join(
 )
 
 Vagrant.configure(2) do |config|
-	config.vm.hostname = "blockextend"
+	config.vm.hostname = "block-plugin-template"
 
 	# Wait to ensure all containers are up.
 	config.vm.provision "shell",
@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
 	# Setup the WP site.
 	config.vm.provision "shell",
-		inline: "docker-compose run wpcli wp core install --url=blockextend.local",
+		inline: "docker-compose run wpcli wp core install --url=block-plugin-template.local",
 		run: "always",
 		env: {
 			"COMPOSE_FILE" => "/vagrant/docker-compose.yml"

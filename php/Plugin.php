@@ -1,6 +1,6 @@
 <?php
 
-namespace XWP\BlockExtend;
+namespace XWP\BlockPluginTemplate;
 
 /**
  * WordPress plugin interface.

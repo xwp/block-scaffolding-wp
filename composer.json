@@ -1,6 +1,6 @@
 {
-  "name": "xwp/block-extend",
-  "description": "Extend WordPress Blocks",
+  "name": "xwp/block-plugin-template",
+  "description": "Block Plugin Template for WordPress",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "require": {
@@ -16,12 +16,12 @@
   },
   "autoload": {
     "psr-4": {
-      "XWP\\BlockExtend\\": "php/"
+      "XWP\\BlockPluginTemplate\\": "php/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "XWP\\BlockExtendTest\\": "tests/php/"
+      "XWP\\BlockPluginTemplateTest\\": "tests/php/"
     }
   },
   "scripts": {

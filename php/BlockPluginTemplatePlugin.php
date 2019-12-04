@@ -1,23 +1,23 @@
 <?php
 
-namespace XWP\BlockExtend;
+namespace XWP\BlockPluginTemplate;
 
 /**
  * Plugin Router.
  */
-class BlockExtendPlugin {
+class BlockPluginTemplatePlugin {
 
 	/**
 	 * Plugin interface.
 	 *
-	 * @var XWP\BlockExtend\Plugin
+	 * @var XWP\BlockPluginTemplate\Plugin
 	 */
 	protected $plugin;
 
 	/**
 	 * Setup the plugin instance.
 	 *
-	 * @param XWP\BlockExtend\Plugin $plugin Instance of the plugin abstraction.
+	 * @param XWP\BlockPluginTemplate\Plugin $plugin Instance of the plugin abstraction.
 	 */
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;
@@ -39,7 +39,7 @@ class BlockExtendPlugin {
 	 */
 	public function enqueue_editor_assets() {
 		wp_enqueue_script(
-			'xwp-block-extend-js',
+			'block-plugin-template-js',
 			$this->plugin->asset_url( 'js/dist/editor.js' ),
 			[
 				'lodash',

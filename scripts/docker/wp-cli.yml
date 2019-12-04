@@ -2,8 +2,8 @@
 path: /var/www/html
 
 core install:
-  title: Block Extend
+  title: Block Plugin Template
   admin_user: admin
   admin_password: password
-  admin_email: admin@blockextend.local
+  admin_email: admin@block-plugin-template.local
 
