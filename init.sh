@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: ./block-scaffolding/init.sh
+# Usage: ./block-scaffolding-wp/init.sh
 
 # Check for valid plugin name.
 function valid_name () {
@@ -42,15 +42,20 @@ slug="$( echo "$name" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' )"
 namespace="$( echo "$name" | sed 's/ //g' )"
 repo="$slug"
 
-echo -n "Enter your GitHub organization name. This will be used as the namespace prefix as-is and converted to lowercase for use in the repository path (i.e. XWP -> xwp), and press [ENTER]: "
+echo
+echo "The Organization name will be used as the Namespace prefix as-entered and "
+echo "converted to lowercase for use in the repository path (i.e. XWP becomes xwp)."
+echo -n "Enter your GitHub organization name, and press [ENTER]: "
 read org
 
 org_lower="$( echo "$org" | tr '[:upper:]' '[:lower:]' )"
 
+echo
 echo -n "Do you want to prepend 'wp-' to your repository name? [Y/N]: "
 read prepend
 
 if [[ "$prepend" != Y ]] && [[ "$prepend" != y ]]; then
+	echo
 	echo -n "Do you want to append '-wp' to your repository name? [Y/N]: "
     read append
 
@@ -61,6 +66,7 @@ else
 	repo="wp-${slug}"
 fi
 
+echo
 echo -n "Do you want to push the plugin to your GitHub repository? [Y/N]: "
 read push
 
@@ -72,11 +78,13 @@ src_repo_path="$(pwd)"
 cd "$cwd"
 
 if [[ -e $( basename "$0" ) ]]; then
+    echo
 	echo "Moving up one directory outside of 'block-scaffolding-wp'"
 	cd ..
 fi
 
 if [[ -e "$slug" ]]; then
+    echo
 	echo "The $slug directory already exists"
 	exit 1
 fi
@@ -106,7 +114,7 @@ rm -f composer.lock
 rm -f package-lock.json
 
 # Install dependencies.
-#npm install
+npm install
 
 # Setup Git.
 git init
