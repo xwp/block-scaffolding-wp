@@ -22,7 +22,7 @@ services:
       - "443:443"
     volumes:
       - wp_data:/var/www/html
-      - .:/var/www/html/wp-content/plugins/block-extend
+      - .:/var/www/html/wp-content/plugins/block-scaffolding-wp
     restart: always
     environment:
       WORDPRESS_DEBUG: 1
@@ -36,15 +36,15 @@ services:
       - wordpress
     volumes:
       - wp_data:/var/www/html
-      - .:/var/www/html/wp-content/plugins/block-extend
+      - .:/var/www/html/wp-content/plugins/block-scaffolding-wp
       - ./scripts/docker/wp-cli.yml:/var/www/html/wp-cli.yml
 
   test:
     image: thecodingmachine/php:7.3-v3-fpm-node8
     volumes:
       - wp_data:/var/www/html
-      - .:/var/www/html/wp-content/plugins/block-extend
-    working_dir: /var/www/html/wp-content/plugins/block-extend
+      - .:/var/www/html/wp-content/plugins/block-scaffolding-wp
+    working_dir: /var/www/html/wp-content/plugins/block-scaffolding-wp
     environment:
       PHP_EXTENSION_XDEBUG: 1
 

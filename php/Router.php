@@ -2,10 +2,10 @@
 /**
  * Router class.
  *
- * @package BlockExtend
+ * @package BlockScaffolding
  */
 
-namespace XWP\BlockExtend;
+namespace XWP\BlockScaffolding;
 
 /**
  * Plugin Router.
@@ -44,7 +44,7 @@ class Router {
 	 */
 	public function enqueue_editor_assets() {
 		wp_enqueue_script(
-			'xwp-block-extend-js',
+			'block-scaffolding-js',
 			$this->plugin->asset_url( 'js/dist/editor.js' ),
 			[
 				'lodash',

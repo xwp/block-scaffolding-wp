@@ -1,16 +1,16 @@
 {
-  "name": "@xwp/block-extend",
+  "name": "@xwp/block-scaffolding-wp",
   "version": "1.0.0",
-  "description": "Extending WordPress Blocks",
+  "description": "Block Scaffolding for WordPress.",
   "author": "XWP",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/xwp/block-extend/issues"
+    "url": "https://github.com/xwp/block-scaffolding-wp/issues"
   },
-  "homepage": "https://github.com/xwp/block-extend#readme",
+  "homepage": "https://github.com/xwp/block-scaffolding-wp#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xwp/block-extend.git"
+    "url": "git+https://github.com/xwp/block-scaffolding-wp.git"
   },
   "scripts": {
     "postinstall": "composer install",

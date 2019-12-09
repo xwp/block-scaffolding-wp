@@ -2,10 +2,10 @@
 /**
  * Plugin class.
  *
- * @package BlockExtend
+ * @package BlockScaffolding
  */
 
-namespace XWP\BlockExtend;
+namespace XWP\BlockScaffolding;
 
 /**
  * WordPress plugin interface.

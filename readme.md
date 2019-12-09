@@ -1,7 +1,7 @@
 # Block Extend
 
-[![Build Status](https://travis-ci.com/xwp/block-extend.svg?branch=master)](https://travis-ci.com/xwp/block-extend)
-[![Coverage Status](https://coveralls.io/repos/github/xwp/block-extend/badge.svg?branch=master)](https://coveralls.io/github/xwp/block-extend?branch=master)
+[![Build Status](https://travis-ci.com/xwp/block-scaffolding-wp.svg?branch=master)](https://travis-ci.com/xwp/block-scaffolding-wp)
+[![Coverage Status](https://coveralls.io/repos/github/xwp/block-scaffolding-wp/badge.svg?branch=master)](https://coveralls.io/github/xwp/block-scaffolding-wp?branch=master)
 
 
 ## Requirements
@@ -27,7 +27,7 @@
 
 		vagrant up
 
-	which will be available at [blockextend.local](http://blockextend.local) after provisioning (username: `admin`, password: `password`).
+	which will be available at [block-scaffolding-wp.local](http://block-scaffolding-wp.local) after provisioning (username: `admin`, password: `password`).
 
 	Alternatively, run it on your local Docker host:
 

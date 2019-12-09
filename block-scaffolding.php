@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name: Block Extend
- * Description: Extend Gutenberg editor blocks.
- * Version: 0.1.0
+ * Plugin Name: Block Scaffolding
+ * Description: Block Scaffolding for WordPress.
+ * Version: 1.0.0
  * Author: XWP
  * Author URI: https://xwp.co
- * Text Domain: block-extend
+ * Text Domain: block-scaffolding
  *
- * @package BlockExtend
+ * @package BlockScaffolding
  */
 
-namespace XWP\BlockExtend;
+namespace XWP\BlockScaffolding;
 
 // Support for site-level autoloading.
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
