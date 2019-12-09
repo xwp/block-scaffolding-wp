@@ -21,7 +21,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "XWP\\BlockPluginTemplateTest\\": "tests/php/"
+      "XWP\\BlockPluginTemplateTest\\": "tests/php/",
+      "XWP\\BlockPluginTemplateScripts\\": "scripts/composer/"
     }
   },
   "scripts": {
@@ -37,6 +38,9 @@
     ],
     "build": [
       "composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts"
+    ],
+    "post-create-project-cmd": [
+      "XWP\\BlockPluginTemplateScripts\\PluginScaffolder::scaffold"
     ]
   },
   "config": {

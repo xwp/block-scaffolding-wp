@@ -1,7 +1,7 @@
 {
   "name": "@xwp/block-plugin-template",
   "version": "1.0.0",
-  "description": "Extending WordPress Blocks",
+  "description": "Block Plugin Template for WordPress",
   "author": "XWP",
   "license": "GPL-2.0-or-later",
   "bugs": {
