@@ -8,7 +8,7 @@
 
 - WordPress 5.0+ or the [Gutenberg Plugin](https://wordpress.org/plugins/gutenberg/).
 - [Composer](https://getcomposer.org) and [Node.js](https://nodejs.org) for dependency management.
-- [Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org) for local development environment.
+- [Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org), or [Docker](https://docs.docker.com/install/), for a local development environment.
 
 
 ## Development
@@ -17,21 +17,31 @@
 
 2. Setup the development environment and tools using [Node.js](https://nodejs.org) and [Composer](https://getcomposer.org):
 
-	   npm install
+		npm install
 
-3. If you need a WordPress development environment, start one using [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/):
+	_running the `npm` commands locally requires PHP 7.2+ be installed on your machine_
 
-	   vagrant up
+3. If you need a WordPress development environment, start one using [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/), or [Docker](https://docs.docker.com/install/):
+
+	**These steps are optional, and the plugin will still run in a typical WordPress development environment.**
+
+		vagrant up
 
 	which will be available at [blockextend.local](http://blockextend.local) after provisioning (username: `admin`, password: `password`).
 
-	This is optional, and this plugin should still run in a typical WordPress development environment.
-
 	Alternatively, run it on your local Docker host:
 
-	   docker-compose up -d
+		docker-compose up -d
 
-	which will make it available at [localhost](http://localhost).
+	which will make it available at [localhost](http://localhost)  (username: `admin`, password: `password`).
+
+	To run `npm` inside the Vagrant environment you can `ssh` into the box and run a single command like so:
+    	
+		vagrant ssh -c "cd /vagrant && npm run test:php"
+	
+	To run the same command directly with your Docker host:
+
+		docker-compose run test npm run test:php
 
 
 ### Scripts
@@ -44,4 +54,6 @@ We use `npm` as the canonical task runner for the project. Some of the PHP relat
 
 - `npm run lint:php` to lint PHP files with [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
 
-- `npm run test:php:no-coverage` to run PHPUnit tests without checking the coverage.
+- `npm run test:php` to run PHPUnit tests without generating a coverage report.
+
+- `npm run test:php:coverage` to run PHPUnit tests and generate a coverage report in both XML Clover and HTML format.
