@@ -4,7 +4,7 @@
  * Description: Block Scaffolding for WordPress.
  * Version: 1.0.0
  * Author: XWP
- * Author URI: https://xwp.co
+ * Author URI: https://github.com/xwp/block-scaffolding-wp
  * Text Domain: block-scaffolding
  *
  * @package BlockScaffolding
