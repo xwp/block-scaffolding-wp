@@ -23,7 +23,9 @@
     "test:php": "composer test -- --no-coverage",
     "test:php:coverage": "composer test -- --coverage-html tests/reports/coverage/",
     "coverage": "npm-run-all --parallel coverage:*",
-    "coverage:php": "composer coverage"
+    "coverage:php": "composer coverage",
+    "docker": "docker-compose run test",
+    "vagrant": "vagrant ssh -- COMPOSE_FILE=/vagrant/docker-compose.yml docker-compose run test"
   },
   "devDependencies": {
     "@wordpress/block-editor": "^3.3.0",

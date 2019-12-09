@@ -33,13 +33,13 @@
 
 	which will make it available at [localhost](http://localhost)  (username: `admin`, password: `password`).
 
-	To run `npm` inside the Vagrant environment you can `ssh` into the box and run a single command like so:
+	To run `npm` inside the Vagrant environment you can use the `npm` script that will `ssh` into the box and run a single command like so:
     	
-		vagrant ssh -c "cd /vagrant && npm run test:php"
+		npm run vagrant -- npm run test:php
 	
 	To run the same command directly with your Docker host:
 
-		docker-compose run test npm run test:php
+		npm run docker -- npm run test:php
 
 ### Scripts
 

@@ -7,15 +7,12 @@
 
 namespace XWP\BlockScaffolding;
 
-use Mockery;
 use WP_Mock;
 
 /**
  * Test the WordPress plugin abstraction.
  */
-class TestPlugin extends WP_Mock\Tools\TestCase {
-
-	use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+class TestPlugin extends TestCase {
 
 	/**
 	 * Test the plugin setup.
