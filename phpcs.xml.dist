@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <ruleset name="Block Scaffolding Coding Standards">
-	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs,vendor/phpcompatibility/php-compatibility/PHPCompatibility,vendor/phpcompatibility/phpcompatibility-paragonie,vendor/phpcompatibility/phpcompatibility-wp/PHPCompatibilityWP" />
-
 	<rule ref="WordPress-Core">
 		<exclude name="WordPress.Files.FileName" />
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
