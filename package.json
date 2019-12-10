@@ -24,8 +24,9 @@
     "test:php:coverage": "composer test -- --coverage-html tests/reports/coverage/",
     "coverage": "npm-run-all --parallel coverage:*",
     "coverage:php": "composer coverage",
-    "docker": "docker-compose run --workdir=/var/www/html/wp-content/plugins/block-scaffolding-wp wordpress",
-    "vagrant": "vagrant ssh -- COMPOSE_FILE=/vagrant/docker-compose.yml docker-compose run --workdir=/var/www/html/wp-content/plugins/block-scaffolding-wp wordpress",
+    "docker": "docker-compose run --user=www-data --workdir=/var/www/html/wp-content/plugins/block-scaffolding-wp wordpress",
+    "vagrant": "vagrant ssh -- COMPOSE_FILE=/vagrant/docker-compose.yml docker-compose run --user=www-data --workdir=/var/www/html/wp-content/plugins/block-scaffolding-wp wordpress",
+    "install-wp": "composer wp -- core install",
     "wp": "composer wp"
   },
   "devDependencies": {
