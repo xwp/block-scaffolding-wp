@@ -6,8 +6,8 @@
 ## Requirements
 
 - WordPress 5.0+ or the [Gutenberg Plugin](https://wordpress.org/plugins/gutenberg/).
-- [Composer](https://getcomposer.org) and [Node.js](https://nodejs.org) for dependency management.
-- [Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org), or [Docker](https://docs.docker.com/install/), for a local development environment.
+- PHP 7.2 or later, [Composer](https://getcomposer.org) and [Node.js](https://nodejs.org) for dependency management.
+- [Docker](https://docs.docker.com/install/) or [Vagrant](https://www.vagrantup.com) with [VirtualBox](https://www.virtualbox.org) for a local development environment.
 
 ## Development
 
@@ -17,7 +17,7 @@
 
 		npm install
 
-	_running the `npm` commands locally requires PHP 7.2+ be installed on your machine_
+	Note that both Node.js and PHP 7.2 or later are required on your computer for running the `npm` scripts.
 
 3. If you need a WordPress development environment, start one using [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/), or [Docker](https://docs.docker.com/install/):
 
