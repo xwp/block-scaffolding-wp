@@ -9,12 +9,12 @@
 - PHP 7.2 or later, [Composer](https://getcomposer.org) and [Node.js](https://nodejs.org) for dependency management.
 - [Docker](https://docs.docker.com/install/) or [Vagrant](https://www.vagrantup.com) with [VirtualBox](https://www.virtualbox.org) for a local development environment.
 
-We suggest using package managers such as [Homebrew](https://brew.sh) on MacOS and [Chocolatey](https://chocolatey.org) for Windows:
+We suggest using package managers such as [Homebrew](https://brew.sh) on MacOS:
 
-	# Using Homebrew on MacOS
 	brew install php composer node docker docker-compose
 
-	# Using Chocolatey on Windows
+or [Chocolatey](https://chocolatey.org) for Windows:
+
 	choco install php composer node nodejs docker-compose
 
 ## Development
@@ -41,24 +41,24 @@ which will make it available at [block-scaffolding-wp.local](http://block-scaffo
 
 Use the included wrapper command for running scripts inside the Docker container running inside Vagrant:
 
-		npm run vagrant -- npm run test:php
+	npm run vagrant -- npm run test:php
 
-	where `npm run test:php` is any of the scripts you would like to run.
+where `npm run test:php` is any of the scripts you would like to run.
 
 
 ### Using Native Docker
 
 To use the Docker based environment on with the Docker engine running on your host, run:
 
-		docker-compose up -d
+	docker-compose up -d
 
-	which will make it available at [localhost](http://localhost). Ensure that no other Docker containers or services are using port 80 on your machine.
+which will make it available at [localhost](http://localhost). Ensure that no other Docker containers or services are using port 80 on your machine.
 
 Use the included wrapper command for running scripts inside the Docker container:
 
-		npm run docker -- npm run test:php
+	npm run docker -- npm run test:php
 
-	where `npm run test:php` is any of the scripts you would like to run.
+where `npm run test:php` is any of the scripts you would like to run.
 
 
 ### Scripts
