@@ -4,4 +4,3 @@ core install:
   admin_user: admin
   admin_password: password
   admin_email: admin@block-scaffolding-wp.local
-
