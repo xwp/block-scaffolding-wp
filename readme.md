@@ -37,7 +37,7 @@ To use the Vagrant based environment, run:
 
 	vagrant up
 
-which will make it available at [block-scaffolding-wp.local](http://block-scaffolding-wp.local) after provisioning (username: `admin`, password: `password`).
+which will make it available at [block-scaffolding-wp.local](http://block-scaffolding-wp.local).
 
 Use the included wrapper command for running scripts inside the Docker container running inside Vagrant:
 
@@ -52,7 +52,7 @@ To use the Docker based environment on with the Docker engine running on your ho
 
 		docker-compose up -d
 
-	which will make it available at [localhost](http://localhost)  (username: `admin`, password: `password`).
+	which will make it available at [localhost](http://localhost). Ensure that no other Docker containers or services are using port 80 on your machine.
 
 Use the included wrapper command for running scripts inside the Docker container:
 

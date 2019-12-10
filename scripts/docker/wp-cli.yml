@@ -1,8 +1,0 @@
-url: block-scaffolding-wp.local
-
-# Defaults for the wp core install command to setup the development site.
-core install:
-  title: Block Scaffolding
-  admin_user: admin
-  admin_password: password
-  admin_email: admin@block-scaffolding-wp.local

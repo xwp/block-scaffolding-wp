@@ -22,14 +22,12 @@ services:
       - "443:443"
     volumes:
       - wp_data:/var/www/html
-      - ./scripts/docker/wp-cli.yml:/var/www/html/wp-cli.yml
       - .:/var/www/html/wp-content/plugins/block-scaffolding-wp
     restart: always
     environment:
       WORDPRESS_DEBUG: 1
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: password
-      WP_CLI_CONFIG_PATH: /var/www/html/wp-cli.yml
       APACHE_RUN_USER: "#33"
 
   mailhog:
