@@ -9,6 +9,14 @@
 - PHP 7.2 or later, [Composer](https://getcomposer.org) and [Node.js](https://nodejs.org) for dependency management.
 - [Docker](https://docs.docker.com/install/) or [Vagrant](https://www.vagrantup.com) with [VirtualBox](https://www.virtualbox.org) for a local development environment.
 
+We suggest using package managers such as [Homebrew](https://brew.sh) on MacOS and [Chocolatey](https://chocolatey.org) for Windows:
+
+	# Using Homebrew on MacOS
+	brew install php composer node docker docker-compose
+
+	# Using Chocolatey on Windows
+	choco install php composer node nodejs docker-compose
+
 ## Development
 
 1. Clone the plugin repository.
