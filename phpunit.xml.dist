@@ -9,8 +9,9 @@
 	>
 
 	<testsuites>
-		<testsuite name="blockextend">
-			<directory>./tests/php/</directory>
+		<testsuite name="block-scaffolding-wp">
+			<directory suffix=".php">./tests/php/</directory>
+			<exclude>./tests/php/TestCase.php</exclude>
 		</testsuite>
 	</testsuites>
 
@@ -18,7 +19,7 @@
 		<whitelist processUncoveredFilesFromWhitelist="false">
 			<directory suffix=".php">./</directory>
 			<exclude>
-				<file>./plugin.php</file>
+				<file>./block-scaffolding.php</file>
 				<directory suffix=".php">./node_modules</directory>
 				<directory suffix=".php">./tests</directory>
 				<directory suffix=".php">./vendor</directory>

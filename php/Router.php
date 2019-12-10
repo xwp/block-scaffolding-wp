@@ -1,23 +1,28 @@
 <?php
+/**
+ * Router class.
+ *
+ * @package BlockScaffolding
+ */
 
-namespace XWP\BlockExtend;
+namespace XWP\BlockScaffolding;
 
 /**
  * Plugin Router.
  */
-class BlockExtendPlugin {
+class Router {
 
 	/**
 	 * Plugin interface.
 	 *
-	 * @var XWP\BlockExtend\Plugin
+	 * @var Plugin
 	 */
 	protected $plugin;
 
 	/**
 	 * Setup the plugin instance.
 	 *
-	 * @param XWP\BlockExtend\Plugin $plugin Instance of the plugin abstraction.
+	 * @param Plugin $plugin Instance of the plugin abstraction.
 	 */
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;
@@ -39,7 +44,7 @@ class BlockExtendPlugin {
 	 */
 	public function enqueue_editor_assets() {
 		wp_enqueue_script(
-			'xwp-block-extend-js',
+			'block-scaffolding-js',
 			$this->plugin->asset_url( 'js/dist/editor.js' ),
 			[
 				'lodash',

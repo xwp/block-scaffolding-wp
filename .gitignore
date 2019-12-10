@@ -1,7 +1,9 @@
-/vendor/
-/node_modules/
-/.vagrant/
-/phpcs.xml
-/phpunit.xml
-/console.log
-/.phpunit.result.cache
+.DS_Store
+.idea/
+.phpunit.result.cache
+.vagrant/
+console.log
+node_modules/
+phpcs.xml
+phpunit.xml
+vendor/

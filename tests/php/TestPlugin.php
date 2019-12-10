@@ -1,21 +1,25 @@
 <?php
+/**
+ * Tests for Plugin class.
+ *
+ * @package BlockScaffolding
+ */
 
-namespace XWP\BlockExtendTest;
+namespace XWP\BlockScaffolding;
 
 use WP_Mock;
-use XWP\BlockExtend\Plugin;
 
 /**
  * Test the WordPress plugin abstraction.
  */
-class PluginTest extends BlockExtendTestCase {
+class TestPlugin extends TestCase {
 
 	/**
 	 * Test the plugin setup.
 	 *
-	 * @covers XWP\BlockExtend\Plugin::__construct()
-	 * @covers XWP\BlockExtend\Plugin::file()
-	 * @covers XWP\BlockExtend\Plugin::dir()
+	 * @covers \XWP\BlockScaffolding\Plugin::__construct()
+	 * @covers \XWP\BlockScaffolding\Plugin::file()
+	 * @covers \XWP\BlockScaffolding\Plugin::dir()
 	 */
 	public function test_plugin_init() {
 		WP_Mock::userFunction( 'wp_upload_dir' )
@@ -31,7 +35,7 @@ class PluginTest extends BlockExtendTestCase {
 	/**
 	 * Test the plugin setup.
 	 *
-	 * @covers XWP\BlockExtend\Plugin::basename()
+	 * @covers \XWP\BlockScaffolding\Plugin::basename()
 	 */
 	public function test_basename() {
 		// Is there a way to do this using withArgs() and andReturnValues()?

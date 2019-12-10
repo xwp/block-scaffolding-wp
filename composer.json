@@ -1,27 +1,29 @@
 {
-  "name": "xwp/block-extend",
-  "description": "Extend WordPress Blocks",
+  "name": "xwp/block-scaffolding-wp",
+  "description": "Block Scaffolding for WordPress.",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "require": {
     "composer/installers": "^1.7"
   },
   "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
     "10up/wp_mock": "^0.4.2",
-    "mockery/mockery": "^1.2",
-    "php-coveralls/php-coveralls": "^2.1",
-    "phpunit/phpunit": "^8.3",
-    "wp-coding-standards/wpcs": "^2.1",
+    "mockery/mockery": "^1.3",
+    "php-coveralls/php-coveralls": "^2.2",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "phpunit/phpunit": "^8.5",
+    "wp-coding-standards/wpcs": "^2.2",
     "wpsh/local": "^0.2.3"
   },
   "autoload": {
     "psr-4": {
-      "XWP\\BlockExtend\\": "php/"
+      "XWP\\BlockScaffolding\\": "php/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "XWP\\BlockExtendTest\\": "tests/php/"
+      "XWP\\BlockScaffolding\\": "tests/php/"
     }
   },
   "scripts": {
@@ -40,6 +42,9 @@
     ]
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "platform": {
+      "php": "7.2"
+    }
   }
 }
