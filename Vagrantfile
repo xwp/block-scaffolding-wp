@@ -11,12 +11,12 @@ Vagrant.configure(2) do |config|
 	# Wait to ensure all containers are up.
 	config.vm.provision "shell",
 		inline: "sleep 10",
-		run: "always"
+		run: "once"
 
 	# Setup the WP site.
 	config.vm.provision "shell",
-		inline: "docker-compose run wordpress wp core install --url=block-scaffolding-wp.local",
-		run: "always",
+		inline: "docker-compose exec wordpress composer npm install && npm run install-wp",
+		run: "once",
 		env: {
 			"COMPOSE_FILE" => "/vagrant/docker-compose.yml"
 		}
