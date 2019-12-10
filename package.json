@@ -25,8 +25,7 @@
     "coverage": "npm-run-all --parallel coverage:*",
     "coverage:php": "composer coverage",
     "docker": "docker-compose run --workdir=/var/www/html/wp-content/plugins/block-scaffolding-wp wordpress",
-    "vagrant": "vagrant ssh -- COMPOSE_FILE=/vagrant/docker-compose.yml docker-compose run --workdir=/var/www/html/wp-content/plugins/block-scaffolding-wp wordpress",
-    "wp": "composer wp --path=/var/www/html"
+    "vagrant": "vagrant ssh -- COMPOSE_FILE=/vagrant/docker-compose.yml docker-compose run --workdir=/var/www/html/wp-content/plugins/block-scaffolding-wp wordpress"
   },
   "devDependencies": {
     "@wordpress/block-editor": "3.3.0",

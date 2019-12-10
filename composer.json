@@ -16,7 +16,6 @@
     "php-coveralls/php-coveralls": "2.2.0",
     "phpcompatibility/phpcompatibility-wp": "2.1.0",
     "phpunit/phpunit": "8.5.0",
-    "wp-cli/wp-cli-bundle": "2.4.0",
     "wp-coding-standards/wpcs": "2.2.0",
     "wpsh/local": "0.2.3"
   },
@@ -43,9 +42,6 @@
     ],
     "build": [
       "composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts"
-    ],
-    "wp": [
-      "wp"
     ]
   },
   "config": {
