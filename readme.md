@@ -26,7 +26,7 @@ or [Chocolatey](https://chocolatey.org) for Windows:
 
 		npm install
 
-	Note that both Node.js and PHP 7.2 or later are required on your computer for running the `npm` scripts.
+	Note that both Node.js and PHP 7.2 or later are required on your computer for running the `npm` scripts. Use `npm run docker -- npm install` to run the installer inside a Docker container if you don't have the required version of PHP installed locally.
 
 ## Development Environment
 
