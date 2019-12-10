@@ -4,7 +4,8 @@ FROM wordpress:php7.3-apache
 RUN apt-get update; \
 	apt-get install -y --no-install-recommends \
 	bash less default-mysql-client git \
-	nodejs npm curl
+	nodejs npm curl \
+	msmtp
 
 RUN curl -s https://getcomposer.org/installer | php \
 	&& mv composer.phar /usr/local/bin/composer
