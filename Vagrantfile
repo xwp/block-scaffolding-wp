@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
 	# Setup the WP site.
 	config.vm.provision "shell",
-		inline: "docker-compose exec wordpress composer npm install && npm run install-wp",
+		inline: "docker-compose exec wordpress npm install && npm run install-wp",
 		run: "once",
 		env: {
 			"COMPOSE_FILE" => "/vagrant/docker-compose.yml"
