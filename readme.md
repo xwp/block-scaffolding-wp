@@ -27,31 +27,45 @@ We suggest using package managers such as [Homebrew](https://brew.sh) on MacOS a
 
 	Note that both Node.js and PHP 7.2 or later are required on your computer for running the `npm` scripts.
 
-3. If you need a WordPress development environment, start one using [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/), or [Docker](https://docs.docker.com/install/):
+## Development Environment
 
-	**These steps are optional, and the plugin will still run in a typical WordPress development environment.**
+This repository includes a WordPress development environment based on [Docker](https://docs.docker.com/install/) that can be run on your computer or inside a [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) wrapper for network isolation and simple `.local` domain names.
 
-		vagrant up
+### Using Vagrant
 
-	which will be available at [block-scaffolding-wp.local](http://block-scaffolding-wp.local) after provisioning (username: `admin`, password: `password`).
+To use the Vagrant based environment, run:
 
-	Alternatively, run it on your local Docker host:
+	vagrant up
+
+which will make it available at [block-scaffolding-wp.local](http://block-scaffolding-wp.local) after provisioning (username: `admin`, password: `password`).
+
+Use the included wrapper command for running scripts inside the Docker container running inside Vagrant:
+
+		npm run vagrant -- npm run test:php
+
+	where `npm run test:php` is any of the scripts you would like to run.
+
+
+### Using Native Docker
+
+To use the Docker based environment on with the Docker engine running on your host, run:
 
 		docker-compose up -d
 
 	which will make it available at [localhost](http://localhost)  (username: `admin`, password: `password`).
 
-	To run `npm` inside the Vagrant environment you can use the `npm` script that will `ssh` into the box and run a single command like so:
-    	
-		npm run vagrant -- npm run test:php
-	
-	To run the same command directly with your Docker host:
+Use the included wrapper command for running scripts inside the Docker container:
 
 		npm run docker -- npm run test:php
+
+	where `npm run test:php` is any of the scripts you would like to run.
+
 
 ### Scripts
 
 We use `npm` as the canonical task runner for the project. Some of the PHP related scripts are defined in `composer.json`.
+
+All of these commands can be run inside the Docker or Vagrant environments by prefixing the scripts with `npm run docker --` for Docker or with `npm run vagrant --` for Vagrant.
 
 - `npm run build` to build the plugin JS and CSS assets. Use `npm run dev` to watch and re-build as you work.
 
