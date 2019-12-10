@@ -43,6 +43,9 @@
     ],
     "build": [
       "composer install --no-dev --prefer-dist --optimize-autoloader --no-scripts"
+    ],
+    "wp": [
+      "wp"
     ]
   },
   "config": {
