@@ -1,6 +1,3 @@
-# Default config for the local development environment.
-path: /var/www/html
-
 core install:
   title: Block Scaffolding
   admin_user: admin
