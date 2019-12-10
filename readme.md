@@ -46,6 +46,8 @@ Use the included wrapper command for running scripts inside the Docker container
 
 where `npm run test:php` is any of the scripts you would like to run.
 
+Visit [block-scaffolding-wp.local:8025](http://block-scaffolding-wp.local:8025) to check all emails sent by WordPress.
+
 
 ### Using Native Docker
 
@@ -53,13 +55,15 @@ To use the Docker based environment with the Docker engine running on your host,
 
 	docker-compose up -d
 
-which will make it available at [localhost](http://localhost). Ensure that no other Docker containers or services are using port 80 on your machine.
+which will make it available at [localhost](http://localhost). Ensure that no other Docker containers or services are using port 80 on your machine. 
 
 Use the included wrapper command for running scripts inside the Docker container:
 
 	npm run docker -- npm run test:php
 
 where `npm run test:php` is any of the scripts you would like to run.
+
+Visit [localhost:8025](http://localhost:8025) to check all emails sent by WordPress.
 
 
 ### Scripts
