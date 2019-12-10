@@ -21,14 +21,13 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - wp_data:/var/www/html
+      - wp_data:/var/www/html/wp-content
       - .:/var/www/html/wp-content/plugins/block-scaffolding-wp
     restart: always
     environment:
       WORDPRESS_DEBUG: 1
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: password
-      APACHE_RUN_USER: "#33"
 
   mailhog:
     image: mailhog/mailhog
