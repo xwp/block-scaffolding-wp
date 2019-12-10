@@ -7,12 +7,12 @@
 
 	<rule ref="WordPress-Docs"></rule>
 
-    <rule ref="PHPCompatibilityWP"/>
-	<config name="testVersion" value="5.6-"/>
 
 	<arg name="extensions" value="php" />
 	<arg name="colors" />
 	<arg value="s" /><!-- Show sniff codes in all reports -->
+	<rule ref="PHPCompatibilityWP" />
+	<config name="testVersion" value="5.6-" />
 
 	<file>.</file>
 	<exclude-pattern>/node_modules/</exclude-pattern>
