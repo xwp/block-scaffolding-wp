@@ -2,7 +2,7 @@
 path: /var/www/html
 
 core install:
-  title: Block Extend
+  title: Block Scaffolding
   admin_user: admin
   admin_password: password
   admin_email: admin@block-scaffolding-wp.local
