@@ -1,3 +1,5 @@
+url: block-scaffolding-wp.local
+
 # Defaults for the wp core install command to setup the development site.
 core install:
   title: Block Scaffolding
