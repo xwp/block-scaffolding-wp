@@ -29,6 +29,7 @@ services:
       WORDPRESS_DEBUG: 1
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: password
+      APACHE_RUN_USER: "#33"
 
   mailhog:
     image: mailhog/mailhog
