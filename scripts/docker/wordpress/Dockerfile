@@ -1,7 +1,7 @@
 FROM wordpress:php7.3-apache
 
 # Development tooling dependencies
-RUN apt-get update
+RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		bash less default-mysql-client git \
 		nodejs npm curl \
