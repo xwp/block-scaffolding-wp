@@ -1,11 +1,12 @@
 FROM wordpress:php7.3-apache
 
 # Development tooling dependencies
-RUN apt-get update; \
-	apt-get install -y --no-install-recommends \
-	bash less default-mysql-client git \
-	nodejs npm curl \
-	msmtp
+RUN apt-get update
+	&& apt-get install -y --no-install-recommends \
+		bash less default-mysql-client git \
+		nodejs npm curl \
+		msmtp \
+	&& rm -rf /var/lib/apt/lists/*
 
 RUN curl -s https://getcomposer.org/installer | php \
 	&& mv composer.phar /usr/local/bin/composer
