@@ -6,8 +6,17 @@
 ## Requirements
 
 - WordPress 5.0+ or the [Gutenberg Plugin](https://wordpress.org/plugins/gutenberg/).
-- [Composer](https://getcomposer.org) and [Node.js](https://nodejs.org) for dependency management.
-- [Vagrant](https://www.vagrantup.com) and [VirtualBox](https://www.virtualbox.org), or [Docker](https://docs.docker.com/install/), for a local development environment.
+- PHP 7.2 or later, [Composer](https://getcomposer.org) and [Node.js](https://nodejs.org) for dependency management.
+- [Docker](https://docs.docker.com/install/) or [Vagrant](https://www.vagrantup.com) with [VirtualBox](https://www.virtualbox.org) for a local development environment.
+
+We suggest using a software package manager for installing the development dependencies such as [Homebrew](https://brew.sh) on MacOS:
+
+	brew install php composer node docker docker-compose
+
+or [Chocolatey](https://chocolatey.org) for Windows:
+
+	choco install php composer node nodejs docker-compose
+
 
 ## Development
 
@@ -17,33 +26,51 @@
 
 		npm install
 
-	_running the `npm` commands locally requires PHP 7.2+ be installed on your machine_
+	Note that both Node.js and PHP 7.2 or later are required on your computer for running the `npm` scripts. Use `npm run docker -- npm install` to run the installer inside a Docker container if you don't have the required version of PHP installed locally.
 
-3. If you need a WordPress development environment, start one using [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/), or [Docker](https://docs.docker.com/install/):
+## Development Environment
 
-	**These steps are optional, and the plugin will still run in a typical WordPress development environment.**
+This repository includes a WordPress development environment based on [Docker](https://docs.docker.com/install/) that can be run on your computer or inside a [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) wrapper for network isolation and simple `.local` domain names.
 
-		vagrant up
+### Using Vagrant
 
-	which will be available at [block-scaffolding-wp.local](http://block-scaffolding-wp.local) after provisioning (username: `admin`, password: `password`).
+To use the Vagrant based environment, run:
 
-	Alternatively, run it on your local Docker host:
+	vagrant up
 
-		docker-compose up -d
+which will make it available at [block-scaffolding-wp.local](http://block-scaffolding-wp.local).
 
-	which will make it available at [localhost](http://localhost)  (username: `admin`, password: `password`).
+Use the included wrapper command for running scripts inside the Docker container running inside Vagrant:
 
-	To run `npm` inside the Vagrant environment you can use the `npm` script that will `ssh` into the box and run a single command like so:
-    	
-		npm run vagrant -- npm run test:php
-	
-	To run the same command directly with your Docker host:
+	npm run vagrant -- npm run test:php
 
-		npm run docker -- npm run test:php
+where `npm run test:php` is any of the scripts you would like to run.
+
+Visit [block-scaffolding-wp.local:8025](http://block-scaffolding-wp.local:8025) to check all emails sent by WordPress.
+
+
+### Using Native Docker
+
+To use the Docker based environment with the Docker engine running on your host, run:
+
+	docker-compose up -d
+
+which will make it available at [localhost](http://localhost). Ensure that no other Docker containers or services are using port 80 on your machine. 
+
+Use the included wrapper command for running scripts inside the Docker container:
+
+	npm run docker -- npm run test:php
+
+where `npm run test:php` is any of the scripts you would like to run.
+
+Visit [localhost:8025](http://localhost:8025) to check all emails sent by WordPress.
+
 
 ### Scripts
 
 We use `npm` as the canonical task runner for the project. Some of the PHP related scripts are defined in `composer.json`.
+
+All of these commands can be run inside the Docker or Vagrant environments by prefixing the scripts with `npm run docker --` for Docker or with `npm run vagrant --` for Vagrant.
 
 - `npm run build` to build the plugin JS and CSS assets. Use `npm run dev` to watch and re-build as you work.
 
