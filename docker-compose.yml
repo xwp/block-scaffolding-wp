@@ -21,7 +21,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - wp_data:/var/www/html/wp-content
+      - ./scripts/docker/wordpress/html:/var/www/html # Persist to disk to enable uploads.
       - .:/var/www/html/wp-content/plugins/block-scaffolding-wp
     restart: always
     environment:
