@@ -6,6 +6,7 @@ RUN apt-get update \
 		bash less default-mysql-client git \
 		nodejs npm curl \
 		msmtp \
+	&& npm install --global npm@latest \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN curl -s https://getcomposer.org/installer | php \
