@@ -3,9 +3,10 @@ FROM wordpress:php7.3-apache
 # Development tooling dependencies
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
-		bash less default-mysql-client git \
+		bash less default-mysql-client git zip unzip \
 		nodejs npm curl \
 		msmtp \
+	&& npm install --global npm@latest \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN curl -s https://getcomposer.org/installer | php \
