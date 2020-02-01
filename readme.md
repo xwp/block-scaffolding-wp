@@ -76,6 +76,8 @@ All of these commands can be run inside the Docker or Vagrant environments by pr
 
 - `npm run lint:js` to lint JavaScript files with [eslint](https://eslint.org/).
 
+- `npm run test:js` to test JavaScript files, using the [@wordpres/scripts package](https://github.com/WordPress/gutenberg/tree/master/packages/scripts#test-unit-js).
+
 - `npm run lint:php` to lint PHP files with [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
 
 - `npm run test:php` to run PHPUnit tests without generating a coverage report.
