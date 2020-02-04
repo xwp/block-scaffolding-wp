@@ -1,6 +1,7 @@
 {
   "name": "@xwp/block-scaffolding-wp",
   "version": "1.0.0",
+  "private": true,
   "description": "Block Scaffolding for WordPress.",
   "author": "XWP",
   "license": "GPL-2.0-or-later",
