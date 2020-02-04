@@ -5,6 +5,10 @@ language: php
 php:
   - "7.3"
 
+node:
+  - node
+  - lts/*
+
 install:
   - npm install
 
