@@ -5,7 +5,7 @@ language: php
 php:
   - "7.3"
 
-node:
+node_js:
   - node
   - lts/*
 
