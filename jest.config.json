@@ -1,0 +1,7 @@
+{
+  "preset": "@wordpress/jest-preset-default",
+  "coverageDirectory": "tests/reports",
+  "coverageReporters": [
+    "lcov"
+  ]
+}
