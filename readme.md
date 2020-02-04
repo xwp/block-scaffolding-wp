@@ -79,3 +79,8 @@ All of these commands can be run inside the Docker or Vagrant environments by pr
 - `npm run test` to run both PHP and JS tests without coverage reporting. Use `npm run test:js` and `npm run test:php` to run tests for JS and PHP seperately.
 
 - `npm run test-with-coverage` to run both PHP and JS tests with coverage reporting.
+
+
+## Continuous Integration
+
+We use [Travis CI](https://travis-ci.com) to lint all code, run tests and report test coverage to [Coveralls](https://coveralls.io) as defined in [`.travis.yml`](.travis.yml).
