@@ -21,6 +21,7 @@
     "lint:php": "composer lint",
     "test": "npm-run-all --parallel test:*",
     "test:js": "wp-scripts test-unit-js",
+    "test:js:coverage": "wp-scripts test-unit-js --coverage --coverageDirectory=tests/coverage/js",
     "test:php": "composer test -- --no-coverage",
     "test:php:coverage": "composer test -- --coverage-html tests/reports/coverage/",
     "coverage": "npm-run-all --parallel coverage:*",
