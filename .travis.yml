@@ -5,9 +5,8 @@ language: php
 php:
   - "7.3"
 
-node_js:
-  - node
-  - lts/*
+before_install:
+  - nvm install stable
 
 install:
   - npm install
