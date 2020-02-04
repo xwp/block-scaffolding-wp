@@ -13,6 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/xwp/block-scaffolding-wp.git"
   },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6.9"
+  },
   "scripts": {
     "postinstall": "composer install",
     "dev": "wp-scripts start",
