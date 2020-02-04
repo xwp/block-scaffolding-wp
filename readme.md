@@ -74,12 +74,8 @@ All of these commands can be run inside the Docker or Vagrant environments by pr
 
 - `npm run build` to build the plugin JS and CSS assets. Use `npm run dev` to watch and re-build as you work.
 
-- `npm run lint:js` to lint JavaScript files with [eslint](https://eslint.org/).
+- `npm run lint` to lint both PHP and JS files. Use `npm run lint:js` and `npm run lint:php` to lint JS and PHP seperately.
 
-- `npm run test:js` to run Jest tests, using the [@wordpress/scripts package](https://github.com/WordPress/gutenberg/tree/master/packages/scripts#test-unit-js).
+- `npm run test` to run both PHP and JS tests without coverage reporting. Use `npm run test:js` and `npm run test:php` to run tests for JS and PHP seperately.
 
-- `npm run lint:php` to lint PHP files with [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
-
-- `npm run test:php` to run PHPUnit tests without generating a coverage report.
-
-- `npm run test:php:coverage` to run PHPUnit tests and generate a coverage report in both XML Clover and HTML format.
+- `npm run test-with-coverage` to run both PHP and JS tests with coverage reporting.
