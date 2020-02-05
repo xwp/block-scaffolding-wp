@@ -1,11 +1,13 @@
 dist: xenial
 
-language:
-  - php
-  - node_js
+language: php
 
 php:
   - "7.3"
+
+before_install:
+  - nvm install
+  - nvm use
 
 install:
   - npm install
