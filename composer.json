@@ -35,6 +35,7 @@
       "phpcs ."
     ],
     "test": [
+      "@putenv XDEBUG_MODE=coverage",
       "phpunit"
     ],
     "coverage": [
